@@ -11,7 +11,11 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>NL MVP Database</title>
     </head>
+   
+    <% String table = (String) request.getAttribute("table"); %>
+    
     <body>
         <h1 align="center">NL MVP Database</h1>
+        <%= table %>
     </body>
 </html>

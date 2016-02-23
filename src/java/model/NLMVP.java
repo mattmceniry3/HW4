@@ -10,22 +10,22 @@ public class NLMVP {
     private int MVP_ID;
     private String PLAYER_NAME;
     private String PLAYER_TEAM;
-    private String PLAYE_POS;
+    private String PLAYER_POSITION;
     private int AGE_AT_MVP;
 
     public NLMVP(){
         this.MVP_ID = 0;
         this.PLAYER_NAME = "";
         this.PLAYER_TEAM = "";
-        this.PLAYE_POS = "";
+        this.PLAYER_POSITION = "";
         this.AGE_AT_MVP = 0;
     }
 
-    public NLMVP(int MVP_ID, String PLAYER_NAME, String PLAYER_TEAM, String PLAYE_POS, int AGE_AT_MVP) {
+    public NLMVP(int MVP_ID, String PLAYER_NAME, String PLAYER_TEAM, String PLAYER_POSITION, int AGE_AT_MVP) {
         this.MVP_ID = MVP_ID;
         this.PLAYER_NAME = PLAYER_NAME;
         this.PLAYER_TEAM = PLAYER_TEAM;
-        this.PLAYE_POS = PLAYE_POS;
+        this.PLAYER_POSITION = PLAYER_POSITION;
         this.AGE_AT_MVP = AGE_AT_MVP;
     }
 
@@ -53,12 +53,12 @@ public class NLMVP {
         this.PLAYER_TEAM = PLAYER_TEAM;
     }
 
-    public String getPLAYE_POS() {
-        return PLAYE_POS;
+    public String getPLAYER_POSITION() {
+        return PLAYER_POSITION;
     }
 
-    public void setPLAYE_POS(String PLAYE_POS) {
-        this.PLAYE_POS = PLAYE_POS;
+    public void setPLAYER_POSITION(String PLAYE_POS) {
+        this.PLAYER_POSITION = PLAYE_POS;
     }
 
     public int getAGE_AT_MVP() {
@@ -71,7 +71,7 @@ public class NLMVP {
 
     @Override
     public String toString() {
-        return "NLMVP{" + "MVP_ID=" + MVP_ID + ", PLAYER_NAME=" + PLAYER_NAME + ", PLAYER_TEAM=" + PLAYER_TEAM + ", PLAYE_POS=" + PLAYE_POS + ", AGE_AT_MVP=" + AGE_AT_MVP + '}';
+        return "NLMVP{" + "MVP_ID=" + MVP_ID + ", PLAYER_NAME=" + PLAYER_NAME + ", PLAYER_TEAM=" + PLAYER_TEAM + ", PLAYE_POS=" + PLAYER_POSITION + ", AGE_AT_MVP=" + AGE_AT_MVP + '}';
     }
 }
     

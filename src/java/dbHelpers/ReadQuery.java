@@ -66,7 +66,27 @@ public String getHTMLtable(){
     
 String table ="";
 
-table += "<table border=1>";
+table += "<table>";
+
+                table += "<th>";
+                table += "MVP ID";
+                table += "</th>";
+                
+                table += "<th>";
+                table += "Player Name";
+                table += "</th>";
+                
+                table += "<th>";
+                table += "Player Team";
+                table += "</th>";
+                
+                table += "<th>";
+                table += "Player Position";
+                table += "</th>";
+                
+                table += "<th>";
+                table += "Age at MVP";
+                table += "</th>";
 
         try {
             while(this.results.next()){
@@ -76,7 +96,7 @@ table += "<table border=1>";
                 nlmvp.setPLAYER_NAME(this.results.getString("PLAYER_NAME"));
                 nlmvp.setPLAYER_TEAM(this.results.getString("PLAYER_TEAM"));
                 nlmvp.setPLAYER_POSITION(this.results.getString("PLAYER_POSITION"));
-                nlmvp.setAGE_AT_MVP(this.results.getInt("AGE_AT_MVP"));
+                nlmvp.setAGE_AT_MVP(this.results.getInt("AGE_AT_MVP"));   
                 
                 table += "<tr>";
                 table += "<td>";

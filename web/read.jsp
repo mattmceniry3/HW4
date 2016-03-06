@@ -13,7 +13,7 @@
     </head>
    
     <% String table = (String) request.getAttribute("table"); %>
-    
+    <link rel=StyleSheet href="style.css" type="text/css">
     <body>
         <h1 align="center">NL MVP Database</h1>
         <%= table %>

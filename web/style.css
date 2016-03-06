@@ -13,7 +13,7 @@ body {
 
 h1 {
     color: #696969;
-    align: center;
+    text-align: center;
 }
 
 table, th, td {
@@ -62,5 +62,21 @@ tr {
 
 a {
     color: #696969;
-    align: center;
+    text-align: center;
+}
+
+hr {width:500px; noshade:no}
+
+form {
+  margin: 0 auto;
+  width: 500px;
+  height: 200px;
+  font-style: italic;
+  line-height: 24px;
+  font-weight: bold;
+  color: #696969;
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid #999;
+
 }

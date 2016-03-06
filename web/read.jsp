@@ -15,7 +15,11 @@
     <% String table = (String) request.getAttribute("table"); %>
     <link rel=StyleSheet href="style.css" type="text/css">
     <body>
-        <h1 align="center">NL MVP Database</h1>
+        <h1>NL MVP Database</h1>
         <%= table %>
+        
+        <br><br>
+        
+        <a href ="add">Add A New MVP</a>
     </body>
 </html>

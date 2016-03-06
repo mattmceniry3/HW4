@@ -13,6 +13,7 @@ body {
 
 h1 {
     color: #696969;
+    align: center;
 }
 
 table, th, td {
@@ -57,4 +58,9 @@ th, td {
 tr {
     background-color: #F08080;
     color: #696969;
+}
+
+a {
+    color: #696969;
+    align: center;
 }

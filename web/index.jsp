@@ -11,8 +11,9 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>NL MVP Homepage</title>
     </head>
+    <link rel=StyleSheet href="style.css" type="text/css">
     <body>
-        <h1 align="center">NL MVP Database</h1>
-        <a align="center" id="read" href="read">View NL MVPs</a> 
+        <h1>NL MVP Database</h1>
+        <a id="read" href="read">View NL MVPs</a> 
     </body>
 </html>

@@ -11,20 +11,17 @@
         <hr></hr>
         <form name="addForm" action="addMVP" method="get">
             
-                <label>MVP ID:</label>
-                <input type="number" name="mvpID" value="" size="30" required />
-                <br>    
                 <label>Player Name:</label>
-                <input type="" name="name" value="" size="30" required />
+                <input type="" name="PLAYER_NAME" value="" size="30" required />
                 <br>
                 <label>Player Team:</label>
-                <input type="text" name="team" value="" size="30" required />
+                <input type="text" name="PLAYER_TEAM" value="" size="30" required />
                 <br>
                 <label>Player Position:</label>
-                <input type="text" name="position" value="" size="30" required />
+                <input type="text" name="PLAYER_POSITION" value="" size="30" required />
                 <br>
                 <label>Age At MVP:</label>
-                <input type="number" name="age" value="" size="30" required />
+                <input type="number" name="AGE_AT_MVP" value="" size="30" required />
                 <br>
             
             <input type="reset" value="Clear" id="clear">

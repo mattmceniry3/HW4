@@ -5,11 +5,10 @@
         <group>
             <file>file://home.iowa.uiowa.edu/mmmceniry/NetBeansProjects/HW5/src/java/controller/AddServlet.java</file>
             <file>file://home.iowa.uiowa.edu/mmmceniry/NetBeansProjects/HW5/web/add.jsp</file>
-            <file>file://home.iowa.uiowa.edu/mmmceniry/NetBeansProjects/HW5/web/index.jsp</file>
-            <file>file://home.iowa.uiowa.edu/mmmceniry/NetBeansProjects/HW5/web/read.jsp</file>
+            <file>file://home.iowa.uiowa.edu/mmmceniry/NetBeansProjects/HW5/src/java/controller/AddForm.java</file>
             <file>file://home.iowa.uiowa.edu/mmmceniry/NetBeansProjects/HW5/src/java/dbHelpers/ReadQuery.java</file>
             <file>file://home.iowa.uiowa.edu/mmmceniry/NetBeansProjects/HW5/src/java/dbHelpers/AddQuery.java</file>
-            <file>file://home.iowa.uiowa.edu/mmmceniry/NetBeansProjects/HW5/web/style.css</file>
+            <file>file://home.iowa.uiowa.edu/mmmceniry/NetBeansProjects/HW5/src/java/controller/Read.java</file>
         </group>
     </open-files>
 </project-private>

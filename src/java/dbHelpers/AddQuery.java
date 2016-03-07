@@ -19,7 +19,7 @@ public class AddQuery {
  public AddQuery(){
         
     Properties props = new Properties(); //MWC    
-    InputStream instr = getClass() .getResourceAsStream("dbConn.properties");
+    InputStream instr = getClass().getResourceAsStream("dbConn.properties");
         try {
             props.load(instr);
         } catch (IOException ex) {
@@ -48,7 +48,7 @@ public class AddQuery {
     
     }
     
- public void doAdd (NLMVP, mvp) {
+ public void doAdd (NLMVP NLMVP) {
     
         try {
             String query = "INSERT INTO NLMVP (PLAYER_NAME, PLAYER_TEAM, PLAYER_POSITION, AGE_AT_MVP) Values (?, ?, ?, ?)";
@@ -58,7 +58,7 @@ public class AddQuery {
             ps.setString(1, NLMVP.getPLAYER_NAME());
             ps.setString(2, NLMVP.getPLAYER_TEAM());
             ps.setString(3, NLMVP.getPLAYER_POSITION());
-            ps.setString(4, NLMVP.getAGE_AT_MVP());
+            ps.setInt(4, NLMVP.getAGE_AT_MVP());
             
             ps.executeUpdate();
         } catch (SQLException ex) {

@@ -87,40 +87,44 @@ table += "<table>";
                 table += "<th>";
                 table += "Age at MVP";
                 table += "</th>";
+                
+                table += "<th>";
+                table += "Delete MVP";
+                table += "</th>";
 
         try {
             while(this.results.next()){
                 
-                NLMVP nlmvp = new NLMVP();
-                nlmvp.setMVP_ID(this.results.getInt("MVP_ID"));
-                nlmvp.setPLAYER_NAME(this.results.getString("PLAYER_NAME"));
-                nlmvp.setPLAYER_TEAM(this.results.getString("PLAYER_TEAM"));
-                nlmvp.setPLAYER_POSITION(this.results.getString("PLAYER_POSITION"));
-                nlmvp.setAGE_AT_MVP(this.results.getInt("AGE_AT_MVP"));   
+                NLMVP NLMVP = new NLMVP();
+                NLMVP.setMVP_ID(this.results.getInt("MVP_ID"));
+                NLMVP.setPLAYER_NAME(this.results.getString("PLAYER_NAME"));
+                NLMVP.setPLAYER_TEAM(this.results.getString("PLAYER_TEAM"));
+                NLMVP.setPLAYER_POSITION(this.results.getString("PLAYER_POSITION"));
+                NLMVP.setAGE_AT_MVP(this.results.getInt("AGE_AT_MVP"));   
                 
                 table += "<tr>";
                 table += "<td>";
-                table += nlmvp.getMVP_ID();
+                table += NLMVP.getMVP_ID();
                 table += "</td>";
                 
                 table += "<td>";
-                table += nlmvp.getPLAYER_NAME();
+                table += NLMVP.getPLAYER_NAME();
                 table += "</td>";
                 
                 table += "<td>";
-                table += nlmvp.getPLAYER_TEAM();
+                table += NLMVP.getPLAYER_TEAM();
                 table += "</td>";
                 
                 table += "<td>";
-                table += nlmvp.getPLAYER_POSITION();
+                table += NLMVP.getPLAYER_POSITION();
                 table += "</td>";
                 
                 table += "<td>";
-                table += nlmvp.getAGE_AT_MVP();
+                table += NLMVP.getAGE_AT_MVP();
                 table += "</td>";
                 
                 table += "<td>";
-                table += "<a href=delete?nlmvp.getMVP_ID()" + nlmvp.getMVP_ID() + "> Delete </a>";
+                table += "<a href=delete?nlmvp.getMVP_ID()" + NLMVP.getMVP_ID() + "> Delete </a>";
                 table += "</td>";
                 
                 table += "</tr>";

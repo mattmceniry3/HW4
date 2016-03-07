@@ -79,17 +79,17 @@ public class AddServlet extends HttpServlet {
             throws ServletException, IOException {
         
         //get the data
-        String name = request.getParameter("name");
-        String team = request.getParameter("team");
-        String position = request.getParameter("position");
-        int age = Integer.parseInt(request.getParameter("age"));
+        String PLAYER_NAME = request.getParameter("PLAYER_NAME");
+        String PLAYER_TEAM = request.getParameter("PLAYER_TEAM");
+        String PLAYER_POSITION = request.getParameter("PLAYER_POSITION");
+        int AGE_AT_MVP = Integer.parseInt(request.getParameter("AGE_AT_MVP"));
         
         //set up a mvp object
-        NLMVP mvp = new NLMVP();
-        mvp.setPLAYER_NAME(name);
-        mvp.setPLAYER_TEAM(team);
-        mvp.setPLAYER_POSITION(position);
-        mvp.setAGE_AT_MVP(age);
+        NLMVP NLMVP = new NLMVP();
+        NLMVP.setPLAYER_NAME(PLAYER_NAME);
+        NLMVP.setPLAYER_TEAM(PLAYER_TEAM);
+        NLMVP.setPLAYER_POSITION(PLAYER_POSITION);
+        NLMVP.setAGE_AT_MVP(AGE_AT_MVP);
         
         //set up an add query object
         AddQuery aq = new AddQuery();

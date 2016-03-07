@@ -118,6 +118,11 @@ table += "<table>";
                 table += "<td>";
                 table += nlmvp.getAGE_AT_MVP();
                 table += "</td>";
+                
+                table += "<td>";
+                table += "<a href=delete?nlmvp.getMVP_ID()" + nlmvp.getMVP_ID() + "> Delete </a>";
+                table += "</td>";
+                
                 table += "</tr>";
                 
             }       } catch (SQLException ex) {

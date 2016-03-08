@@ -10,7 +10,7 @@ import java.sql.SQLException;
 import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import model.NLMVP;
+import model.MVP;
 
 
 public class ReadQuery {
@@ -53,7 +53,7 @@ public class ReadQuery {
     public void doRead(){
     
         try {
-            String query = "Select * from NLMVP";
+            String query = "Select * from MVP";
             
             PreparedStatement ps = conn.prepareStatement(query);
             this.results = ps.executeQuery();
@@ -69,7 +69,7 @@ String table ="";
 table += "<table>";
 
                 table += "<th>";
-                table += "MVP ID";
+                table += "ID";
                 table += "</th>";
                 
                 table += "<th>";
@@ -95,38 +95,37 @@ table += "<table>";
         try {
             while(this.results.next()){
                 
-                NLMVP NLMVP = new NLMVP();
-                NLMVP.setMVP_ID(this.results.getInt("MVP_ID"));
-                NLMVP.setPLAYER_NAME(this.results.getString("PLAYER_NAME"));
-                NLMVP.setPLAYER_TEAM(this.results.getString("PLAYER_TEAM"));
-                NLMVP.setPLAYER_POSITION(this.results.getString("PLAYER_POSITION"));
-                NLMVP.setAGE_AT_MVP(this.results.getInt("AGE_AT_MVP"));   
+                MVP mvp = new MVP();
+                mvp.setID(this.results.getInt("ID"));
+                mvp.setPLAYER_NAME(this.results.getString("PLAYER_NAME"));
+                mvp.setPLAYER_TEAM(this.results.getString("PLAYER_TEAM"));
+                mvp.setPLAYER_POSITION(this.results.getString("PLAYER_POSITION"));
+                mvp.setAGE_AT_MVP(this.results.getInt("AGE_AT_MVP"));   
                 
                 table += "<tr>";
                 table += "<td>";
-                table += NLMVP.getMVP_ID();
+                table += mvp.getID();
                 table += "</td>";
                 
                 table += "<td>";
-                table += NLMVP.getPLAYER_NAME();
+                table += mvp.getPLAYER_NAME();
                 table += "</td>";
                 
                 table += "<td>";
-                table += NLMVP.getPLAYER_TEAM();
+                table += mvp.getPLAYER_TEAM();
                 table += "</td>";
                 
                 table += "<td>";
-                table += NLMVP.getPLAYER_POSITION();
+                table += mvp.getPLAYER_POSITION();
                 table += "</td>";
                 
                 table += "<td>";
-                table += NLMVP.getAGE_AT_MVP();
+                table += mvp.getAGE_AT_MVP();
                 table += "</td>";
                 
                 table += "<td>";
-                table += "<a href=delete?nlmvp.getMVP_ID()" + NLMVP.getMVP_ID() + "> Delete </a>";
+                table += "<a href=delete?ID=" + mvp.getID() + "> Delete </a>";
                 table += "</td>";
-                
                 table += "</tr>";
                 
             }       } catch (SQLException ex) {

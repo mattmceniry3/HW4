@@ -6,35 +6,35 @@
 package model;
 
 
-public class NLMVP {
-    private int MVP_ID;
+public class MVP {
+    private int ID;
     private String PLAYER_NAME;
     private String PLAYER_TEAM;
     private String PLAYER_POSITION;
     private int AGE_AT_MVP;
 
-    public NLMVP(){
-        this.MVP_ID = 0;
+    public MVP(){
+        this.ID = 0;
         this.PLAYER_NAME = "";
         this.PLAYER_TEAM = "";
         this.PLAYER_POSITION = "";
         this.AGE_AT_MVP = 0;
     }
 
-    public NLMVP(int MVP_ID, String PLAYER_NAME, String PLAYER_TEAM, String PLAYER_POSITION, int AGE_AT_MVP) {
-        this.MVP_ID = MVP_ID;
+    public MVP(int ID, String PLAYER_NAME, String PLAYER_TEAM, String PLAYER_POSITION, int AGE_AT_MVP) {
+        this.ID = ID;
         this.PLAYER_NAME = PLAYER_NAME;
         this.PLAYER_TEAM = PLAYER_TEAM;
         this.PLAYER_POSITION = PLAYER_POSITION;
         this.AGE_AT_MVP = AGE_AT_MVP;
     }
 
-    public int getMVP_ID() {
-        return MVP_ID;
+    public int getID() {
+        return ID;
     }
 
-    public void setMVP_ID(int MVP_ID) {
-        this.MVP_ID = MVP_ID;
+    public void setID(int ID) {
+        this.ID = ID;
     }
 
     public String getPLAYER_NAME() {
@@ -71,7 +71,7 @@ public class NLMVP {
 
     @Override
     public String toString() {
-        return "NLMVP{" + "MVP_ID=" + MVP_ID + ", PLAYER_NAME=" + PLAYER_NAME + ", PLAYER_TEAM=" + PLAYER_TEAM + ", PLAYE_POS=" + PLAYER_POSITION + ", AGE_AT_MVP=" + AGE_AT_MVP + '}';
+        return "MVP{" + "ID=" + ID + ", PLAYER_NAME=" + PLAYER_NAME + ", PLAYER_TEAM=" + PLAYER_TEAM + ", PLAYE_POS=" + PLAYER_POSITION + ", AGE_AT_MVP=" + AGE_AT_MVP + '}';
     }
 }
     

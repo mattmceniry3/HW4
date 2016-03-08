@@ -10,7 +10,7 @@ import java.sql.SQLException;
 import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import model.NLMVP;
+import model.MVP;
 
 public class AddQuery {
     
@@ -48,17 +48,17 @@ public class AddQuery {
     
     }
     
- public void doAdd (NLMVP NLMVP) {
+ public void doAdd (MVP mvp) {
     
         try {
-            String query = "INSERT INTO NLMVP (PLAYER_NAME, PLAYER_TEAM, PLAYER_POSITION, AGE_AT_MVP) Values (?, ?, ?, ?)";
+            String query = "INSERT INTO mvp (PLAYER_NAME, PLAYER_TEAM, PLAYER_POSITION, AGE_AT_MVP) Values (?, ?, ?, ?)";
             
             PreparedStatement ps = conn.prepareStatement(query);
             
-            ps.setString(1, NLMVP.getPLAYER_NAME());
-            ps.setString(2, NLMVP.getPLAYER_TEAM());
-            ps.setString(3, NLMVP.getPLAYER_POSITION());
-            ps.setInt(4, NLMVP.getAGE_AT_MVP());
+            ps.setString(1, mvp.getPLAYER_NAME());
+            ps.setString(2, mvp.getPLAYER_TEAM());
+            ps.setString(3, mvp.getPLAYER_POSITION());
+            ps.setInt(4, mvp.getAGE_AT_MVP());
             
             ps.executeUpdate();
         } catch (SQLException ex) {

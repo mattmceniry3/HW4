@@ -14,7 +14,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import model.NLMVP;
+import model.MVP;
 
 /**
  *
@@ -85,17 +85,17 @@ public class AddServlet extends HttpServlet {
         int AGE_AT_MVP = Integer.parseInt(request.getParameter("AGE_AT_MVP"));
         
         //set up a mvp object
-        NLMVP NLMVP = new NLMVP();
-        NLMVP.setPLAYER_NAME(PLAYER_NAME);
-        NLMVP.setPLAYER_TEAM(PLAYER_TEAM);
-        NLMVP.setPLAYER_POSITION(PLAYER_POSITION);
-        NLMVP.setAGE_AT_MVP(AGE_AT_MVP);
+        MVP mvp = new MVP();
+        mvp.setPLAYER_NAME(PLAYER_NAME);
+        mvp.setPLAYER_TEAM(PLAYER_TEAM);
+        mvp.setPLAYER_POSITION(PLAYER_POSITION);
+        mvp.setAGE_AT_MVP(AGE_AT_MVP);
         
         //set up an add query object
         AddQuery aq = new AddQuery();
         
         //pass the mvp to addQuery to add to the database
-        aq.doAdd(NLMVP);
+        aq.doAdd(mvp);
         
         //pass execution control to the ReadServlet
         String url ="/read";

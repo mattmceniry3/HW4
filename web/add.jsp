@@ -3,7 +3,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Add a New MVP</title>
+        <title>Add New MVP</title>
     </head>
     <link rel=StyleSheet href="style.css" type="text/css">
     <body>

@@ -11,6 +11,15 @@
     </head>
     <link rel=StyleSheet href="style.css" type="text/css">
     <body>
+        
+    <div class="wrap"> <!-- div to hold all other divs -->    
+        
+    <%@ include file="includes/Header.jsp" %>
+    
+    <%@ include file="includes/menu.jsp" %>
+        
+    <div class="main"> <!-- main div -->   
+        
         <h1>Update MVP Record</h1>
         <hr></hr>
         <form name="updateForm" action="updateMVP" method="get">
@@ -36,5 +45,13 @@
            
     
         </form>
+                
+                </div> <!-- close main div -->
+    
+     <%@ include file="includes/footer.jsp" %>
+        
+    </div> <!-- close wrap div --> 
+                
+                
     </body>
 </html>

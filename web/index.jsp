@@ -13,9 +13,20 @@
     </head>
     <link rel=StyleSheet href="style.css" type="text/css">
     <body>
+    
+    <div class="wrap"> <!-- div to hold all other divs -->    
+        
+    <%@ include file="includes/Header.jsp" %>
+    
+    <%@ include file="includes/menu.jsp" %>
+        
+    <div class="main"> <!-- main div -->    
         <h1>NL MVP Database</h1>
-        <a id="read" href="read">View NL MVPs</a>
-        <br><br>
-        <a id="read" href="search.jsp">Search NL MVPs</a> 
+      
+    </div> <!-- close main div -->
+    
+     <%@ include file="includes/footer.jsp" %>
+        
+    </div> <!-- close wrap div -->    
     </body>
 </html>

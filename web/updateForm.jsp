@@ -16,7 +16,7 @@
         <form name="updateForm" action="updateMVP" method="get">
             
                 <label>ID:</label>
-                <input type="number" name="ID" value="<%= mvp.getID() %>" size="30" readonly />
+                <input type="number" name="ID" value="<%= mvp.getID() %>" size="30" readonly/>
                 <br>
                 <label>Player Name:</label>
                 <input type="text" name="PLAYER_NAME" value="<%= mvp.getPLAYER_NAME() %>" size="30" />

@@ -7,7 +7,7 @@
     </head>
     <link rel=StyleSheet href="style.css" type="text/css">
     <body>
-        <h1>Add a New MVP</h1>
+        <h1>Add A New MVP</h1>
         <hr></hr>
         <form name="addForm" action="addMVP" method="get">
             

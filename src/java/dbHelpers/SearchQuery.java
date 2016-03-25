@@ -13,24 +13,24 @@ import java.util.logging.Logger;
 import model.MVP;
 
 
-public class ReadQuery {
-    
-    private Connection conn;
-    private ResultSet results;
-    
-    public ReadQuery(){
-        
-    Properties props = new Properties(); //MWC    
+public class SearchQuery {
+
+private Connection conn;
+private ResultSet results;
+
+public SearchQuery(){
+
+Properties props = new Properties(); //MWC    
     InputStream instr = getClass() .getResourceAsStream("dbConn.properties");
         try {
             props.load(instr);
         } catch (IOException ex) {
-            Logger.getLogger(ReadQuery.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(SearchQuery.class.getName()).log(Level.SEVERE, null, ex);
         }
         try {
             instr.close();
         } catch (IOException ex) {
-            Logger.getLogger(ReadQuery.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(SearchQuery.class.getName()).log(Level.SEVERE, null, ex);
         }
     
     String driver = props.getProperty("driver.name");
@@ -40,27 +40,30 @@ public class ReadQuery {
         try {
             Class.forName(driver);
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(ReadQuery.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(SearchQuery.class.getName()).log(Level.SEVERE, null, ex);
         }
         try {
             conn = DriverManager.getConnection(url, username, passwd);
         } catch (SQLException ex) {
-            Logger.getLogger(ReadQuery.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(SearchQuery.class.getName()).log(Level.SEVERE, null, ex);
         }
     
+    }    
+
+public void doSearch(String PLAYER_NAME) {
+    
+    try {
+        String query = "SELECT * FROM mvp WHERE UPPER(PLAYER_NAME) LIKE ? ORDER BY ID ASC";
+        
+        PreparedStatement ps = conn.prepareStatement(query);
+        ps.setString(1, "%" + PLAYER_NAME.toUpperCase() + "%");
+        this.results = ps.executeQuery();
+    } catch (SQLException ex) {
+        Logger.getLogger(SearchQuery.class.getName()).log(Level.SEVERE, null, ex);
     }
     
-    public void doRead(){
     
-        try {
-            String query = "Select * from MVP ORDER BY ID ASC";
-            
-            PreparedStatement ps = conn.prepareStatement(query);
-            this.results = ps.executeQuery();
-        } catch (SQLException ex) {
-            Logger.getLogger(ReadQuery.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
+}
 
 public String getHTMLtable(){
     
@@ -129,12 +132,12 @@ table += "<table>";
                 table += "</tr>";
                 
             }       } catch (SQLException ex) {
-            Logger.getLogger(ReadQuery.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(SearchQuery.class.getName()).log(Level.SEVERE, null, ex);
         }
 
 table += "</table>";
 
 return table;
 } 
-
-}
+    
+}    

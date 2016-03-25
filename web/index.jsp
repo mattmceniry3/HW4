@@ -14,6 +14,8 @@
     <link rel=StyleSheet href="style.css" type="text/css">
     <body>
         <h1>NL MVP Database</h1>
-        <a id="read" href="read">View NL MVPs</a> 
+        <a id="read" href="read">View NL MVPs</a>
+        <br><br>
+        <a id="read" href="search.jsp">Search NL MVPs</a> 
     </body>
 </html>

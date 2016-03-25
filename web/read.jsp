@@ -21,5 +21,7 @@
         <br><br>
         
         <a href ="add">Add A New MVP</a>
+         <br><br>
+        <a id="read" href="search.jsp">Search NL MVPs</a>
     </body>
 </html>

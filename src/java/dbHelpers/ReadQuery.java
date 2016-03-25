@@ -124,7 +124,7 @@ table += "<table>";
                 table += "</td>";
                 
                 table += "<td>";
-                table += "<a href=delete?ID=" + mvp.getID() + "> Delete </a>";
+                table += "<a href=update?ID=" + mvp.getID() + ">Update</a>" + "<a href=delete?ID=" + mvp.getID() + ">Delete</a>";
                 table += "</td>";
                 table += "</tr>";
                 

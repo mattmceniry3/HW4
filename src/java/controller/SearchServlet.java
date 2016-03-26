@@ -79,7 +79,7 @@ public class SearchServlet extends HttpServlet {
             throws ServletException, IOException {
         
         //Get the text to search
-        String PLAYER_NAME = request.getParameter("serachVal");
+        String PLAYER_NAME = request.getParameter("searchVal");
         
         //Create a SearchQuery helper object
         SearchQuery sq = new SearchQuery();

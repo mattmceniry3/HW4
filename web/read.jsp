@@ -11,9 +11,8 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>NL MVP Database</title>
     </head>
-   
+    <link rel=StyleSheet href="./css/style.css" type="text/css">
     <% String table = (String) request.getAttribute("table"); %>
-    <link rel=StyleSheet href="style.css" type="text/css">
     <body>
     
     <div class="wrap"> <!-- div to hold all other divs -->    

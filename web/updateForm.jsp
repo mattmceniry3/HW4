@@ -9,7 +9,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Update MVP</title>
     </head>
-    <link rel=StyleSheet href="style.css" type="text/css">
+    <link rel=StyleSheet href="./css/style.css" type="text/css">
     <body>
         
     <div class="wrap"> <!-- div to hold all other divs -->    
